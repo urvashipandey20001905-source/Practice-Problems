@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class TriangularParkRun {
+
+    // Method to calculate number of rounds
+    public static double calculateRounds(double a, double b, double c) {
+        double perimeter = a + b + c;   // perimeter of triangle
+        double totalDistance = 5000;    // 5 km = 5000 meters
+        return totalDistance / perimeter;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Taking input for sides of triangle
+        System.out.print("Enter side 1 (in meters): ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter side 2 (in meters): ");
+        double b = sc.nextDouble();
+
+        System.out.print("Enter side 3 (in meters): ");
+        double c = sc.nextDouble();
+
+        // Calculate rounds
+        double rounds = calculateRounds(a, b, c);
+
+        // Output
+        System.out.println("The athlete needs to complete " + rounds + " rounds to finish 5 km run.");
+
+        sc.close();
+    }
+}
